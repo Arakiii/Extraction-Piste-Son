@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon/AboutIcon.png</file>
+        <file>Icon/FullScreenIcon.png</file>
+        <file>Icon/MusicIcon.png</file>
+        <file>Icon/OpenIcon.png</file>
+        <file>Icon/PauseIcon.png</file>
+        <file>Icon/PdfIcon.png</file>
+        <file>Icon/PlayIcon.png</file>
+        <file>Icon/qt-creator.jpg</file>
+        <file>Icon/QuitIcon.png</file>
+        <file>Icon/SaveIcon.png</file>
+        <file>Icon/SupaZbouiHD.png</file>
+        <file>Icon/ZbouiHD.png</file>
+        <file>Icon/Portee.PNG</file>
+        <file>Icon/play.png</file>
+        <file>Icon/pause.png</file>
+        <file>Icon/noireDO.png</file>
+        <file>Icon/noire.png</file>
+        <file>Icon/icone.png</file>
+        <file>Icon/gray_background.png</file>
+        <file>Icon/croche.png</file>
+        <file>Icon/cledesol.png</file>
+        <file>Icon/cledefa.png</file>
+        <file>Icon/blanche.png</file>
+        <file>Icon/BarreMilon.png</file>
+    </qresource>
+</RCC>
