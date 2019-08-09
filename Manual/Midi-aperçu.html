@@ -1,0 +1,27 @@
+<h1>Midi - Bref aper&ccedil;u</h1>
+<p><span lang="fr" tabindex="0">Midi (Musical Instrument Digital Interface) est une interface num&eacute;rique permettant &agrave; l'utilisateur de contr&ocirc;ler des instruments de musique virtuels sur son ordinateur ou d'autres composants mat&eacute;riels. En g&eacute;n&eacute;ral, le protocole Midi est utilis&eacute; pour &eacute;changer des commandes du type "jouer X avec la vitesse Y sur l'instrument Z" ou similaire.</span></p>
+<p><span lang="fr" tabindex="0">Ces commandes sont g&eacute;n&eacute;ralement stock&eacute;es et &eacute;chang&eacute;es &agrave; l'aide de ce qu'on appelle des &eacute;v&eacute;nements Midi. Ils peuvent trouver des informations sur les notes en cours de lecture, les sons appartenant &agrave; chaque instrument (virtuel) ou des informations g&eacute;n&eacute;rales sur la chanson, par exemple, sur la cl&eacute;, le compteur ou le nom de la chanson. Il existe de nombreuses autres commandes pouvant par exemple contr&ocirc;ler la p&eacute;dale de sustain d'un piano ou d&eacute;finir le volume g&eacute;n&eacute;ral d'un instrument. Les &eacute;v&eacute;nements sont pr&eacute;sent&eacute;s ci-dessous plus en d&eacute;tail.</span></p>
+<h2><span lang="fr" tabindex="0">Pistes et canaux</span></h2>
+<p><span lang="fr" tabindex="0">Les diff&eacute;rents instruments virtuels sont organis&eacute;s en pistes, chaque piste faisant r&eacute;f&eacute;rence &agrave; un instrument ou &agrave; un groupe d'instruments. Par cons&eacute;quent, chaque &eacute;v&eacute;nement Midi est assign&eacute; &agrave; une piste. Chaque note est assign&eacute;e &agrave; la piste de l'instrument qui la joue, tandis que les &eacute;v&eacute;nements n'appartenant pas &agrave; un instrument sp&eacute;cifique (cl&eacute;, compteur, etc.) sont g&eacute;n&eacute;ralement assign&eacute;s &agrave; une piste sp&eacute;cifique ("piste de tempo"). De plus, chaque note et autres &eacute;v&eacute;nements sp&eacute;cifiques &agrave; l'instrument sont affect&eacute;s &agrave; un canal. Il existe 16 canaux pour lesquels chaque canal a un son d&eacute;fini (par exemple, "Piano" ou "Ensemble de cordes"). Bien que l&rsquo;affectation de chaque note &agrave; une piste et &agrave; un canal puisse sembler redondante, le concept est logique. En effet, les informations sur les diff&eacute;rentes pistes ne sont connues que du p&eacute;riph&eacute;rique qui demande &agrave; un autre p&eacute;riph&eacute;rique de jouer la note. L'autre appareil ne recevra que des informations sur le canal sur lequel jouer la note, ce qui r&eacute;duit le trafic n&eacute;cessaire pour &eacute;changer les informations. Par cons&eacute;quent, les pistes sont (principalement) pour l'orientation d'un utilisateur lors de l'&eacute;dition d'un fichier. En r&egrave;gle g&eacute;n&eacute;rale, toutes les notes d&rsquo;une m&ecirc;me piste sont &eacute;galement affect&eacute;es &agrave; un canal sp&eacute;cifique.</span></p>
+<h2><span lang="fr" tabindex="0">Evenement Midi</span></h2>
+<p><span lang="fr" tabindex="0">La liste suivante r&eacute;pertorie les diff&eacute;rents &eacute;v&eacute;nements Midi et donne un aper&ccedil;u de leurs fonctionnalit&eacute;s.</span></p>
+<ul style="list-style-type: disc;">
+<li><em><span lang="fr" tabindex="0">Note On / Off &Eacute;v&eacute;nements</span></em></li>
+</ul>
+<p><span lang="fr" tabindex="0">Chaque note est repr&eacute;sent&eacute;e par deux &eacute;v&eacute;nements, un &eacute;v&eacute;nement indiquant le d&eacute;but d'une note et l'autre &eacute;v&eacute;nement servant &agrave; l'arr&ecirc;ter. La hauteur de la note est repr&eacute;sent&eacute;e par un nombre compris entre 0 (C0) et 127 (G10) et la v&eacute;locit&eacute; de la note (volume) varie de 0 &agrave; 127.</span></p>
+<ul style="list-style-type: disc;">
+<li><span lang="fr" tabindex="0">&Eacute;v&eacute;nements de changement de tempo</span></li>
+</ul>
+<p><span lang="fr" tabindex="0">Un &eacute;v&eacute;nement de changement de tempo d&eacute;finit le tempo actuel. Le tempo est d&eacute;fini en battements par minute (BPM). Des valeurs plus &eacute;lev&eacute;es indiquent un tempo plus rapide.</span></p>
+<ul>
+<li><span lang="fr" tabindex="0">&Eacute;v&eacute;nements cl&eacute;s</span></li>
+</ul>
+<p><span lang="fr" tabindex="0">Un &eacute;v&eacute;nement de signature de cl&eacute; d&eacute;finit la cl&eacute; de la chanson (C majeur, G mineur, ...).</span></p>
+<ul style="list-style-type: disc;">
+<li><span lang="fr" tabindex="0">&Eacute;v&eacute;nements de pression de cl&eacute; / canal</span></li>
+</ul>
+<p><span lang="fr" tabindex="0">Ces &eacute;v&eacute;nements contr&ocirc;lent la pression pour chaque note (&eacute;v&eacute;nements de pression de touche) ou pour toutes les notes jou&eacute;es sur un canal donn&eacute; (&eacute;v&eacute;nements de pression de canal).</span></p>
+<ul style="list-style-type: disc;">
+<li><span lang="fr" tabindex="0">&Eacute;v&eacute;nements de texte</span></li>
+</ul>
+<p><span lang="fr" tabindex="0">Les paroles, les instruments / noms de piste ou les informations g&eacute;n&eacute;rales (Copyright, etc.) peuvent &ecirc;tre stock&eacute;s dans les &eacute;v&eacute;nements de texte.</span></p>
